@@ -973,6 +973,10 @@ ul li a:hover {
   vertical-align: middle;
 }
 
+.gray-box1 p:hover, .gray-box2 p:hover, .gray-box3 p:hover{
+transform: scale(1.3);
+} 
+
 
 .bx-last {
   width: 100%;
@@ -1103,12 +1107,18 @@ footer {
   width: 32px;
   height: 32px;
   border: none;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #3c464c;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
 }
 
 .div1 img {
-  padding: 7px;
+width: 18px;
+height: 18px;
+object-fit: contain;
 }
 
 .div1:hover {
@@ -1242,4 +1252,71 @@ form img {
   letter-spacing: 0%;
   color: #d9dbe1;
   text-indent: 15px;
+}
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-options {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .homepage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-text,
+  .homepage-img {
+    transform: none;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-btn {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .homepage-text h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .homepage-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .brands-img,
+  .brands-text,
+  .description-cards,
+  .feature-item,
+  .tesla-box,
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .number-data {
+    grid-template-columns: 1fr;
+  }
+
+  .c-btn,
+  .f-btn,
+  .b-btn {
+    transform: none;
+    width: 100%;
+  }
 }
